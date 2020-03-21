@@ -1,0 +1,21 @@
+
+
+.movie-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 250px;
+    height: 400px;
+    background-color: lightblue;
+    margin: 5px;
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    border: solid 1px black;
+}
+
+img{
+    height: 300px;
+    width: 200px;
+}
