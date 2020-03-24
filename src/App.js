@@ -9,20 +9,31 @@ class  App extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      list: []
+      list: [],
+      favorites: []
     }
     this.getMovies = this.getMovies.bind(this);
+    this.cardSelected = this.cardSelected.bind(this);
+
   }
 
   // componentDidMount(){};
 
   render() { 
     const { getMovies } = this;
+    const { cardSelected } = this;
 
     return (
       <div className="App">
-        <InputSearch buttonName={'busca'} actionToPerform={ getMovies }></InputSearch>
-        <MovieList list={this.state.list}></MovieList>
+          <InputSearch buttonName={'busca'} actionToPerform={ getMovies }></InputSearch>
+          <main>
+            <aside className="aside">
+              <MovieList list={this.state.favorites} cardSelected={ cardSelected }></MovieList>
+            </aside>
+            <section className="section">
+              <MovieList list={this.state.list}  cardSelected={ cardSelected }></MovieList>
+            </section>
+          </main>
       </div>
     );
   }
@@ -36,12 +47,41 @@ class  App extends React.Component {
     .then(response => {
       return response.json();
     }).then(result => {
-      if(result){
+      if(result.Search && result.Search.length > 0){
         this.setState({list: result.Search});    
       }else{
-        alert('Pelicula no encontrada');
+        this.setState({list: []});    
       }
     });
+  }
+
+  cardSelected(ev){
+    const id = ev.currentTarget.id;
+    const newFav = this.searchById(id,this.state.list);
+    const isAlreadyInFavs = this.searchById(id,this.state.favorites);
+    
+    if(newFav){
+      if(!isAlreadyInFavs){
+        //AÑADIR A FAVORITOS
+        this.setState({favorites: [...this.state.favorites,newFav] }) 
+      }else{
+        //BORRAR DE FAVORITOS
+        const favoritesCopy = Object.assign([],this.state.favorites);
+        favoritesCopy.splice(favoritesCopy.indexOf(newFav),1);
+        this.setState({favorites: [...favoritesCopy] }) 
+      }
+    }else{
+      alert('ERROR');
+    }
+  }
+
+  searchById(id,arr){
+    for(const elem of arr){
+      if(elem && elem.imdbID.toString() === id.toString()){
+        return elem;
+      }
+    }
+    return null;
   }
 
 }
