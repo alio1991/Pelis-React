@@ -62,10 +62,8 @@ class  App extends React.Component {
     
     if(newFav){
       if(!isAlreadyInFavs){
-        //AÑADIR A FAVORITOS
         this.setState({favorites: [...this.state.favorites,newFav] }) 
       }else{
-        //BORRAR DE FAVORITOS
         const favoritesCopy = Object.assign([],this.state.favorites);
         favoritesCopy.splice(favoritesCopy.indexOf(newFav),1);
         this.setState({favorites: [...favoritesCopy] }) 
