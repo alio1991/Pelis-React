@@ -28,10 +28,10 @@ class  App extends React.Component {
           <InputSearch buttonName={'busca'} actionToPerform={ getMovies }></InputSearch>
           <main>
             <aside className="aside">
-              <MovieList list={this.state.favorites} cardSelected={ cardSelected }></MovieList>
+              <MovieList list={this.state.favorites} cardSelected={ cardSelected } class="favorite" ></MovieList>
             </aside>
             <section className="section">
-              <MovieList list={this.state.list}  cardSelected={ cardSelected }></MovieList>
+              <MovieList list={this.state.list}  cardSelected={ cardSelected } class="normal" ></MovieList>
             </section>
           </main>
       </div>
@@ -48,6 +48,7 @@ class  App extends React.Component {
       return response.json();
     }).then(result => {
       if(result.Search && result.Search.length > 0){
+        this.setState({list: []});  
         this.setState({list: result.Search});    
       }else{
         this.setState({list: []});    
@@ -60,16 +61,18 @@ class  App extends React.Component {
     const newFav = this.searchById(id,this.state.list);
     const isAlreadyInFavs = this.searchById(id,this.state.favorites);
     
-    if(newFav){
-      if(!isAlreadyInFavs){
+    if(newFav){ //Si se selecciona una tarjeta de busqueda
+      if(!isAlreadyInFavs){ // Si no está en favoritos se añade
         this.setState({favorites: [...this.state.favorites,newFav] }) 
-      }else{
+      }else{ // Si ya se encuentra en favoritos, se borra
         const favoritesCopy = Object.assign([],this.state.favorites);
         favoritesCopy.splice(favoritesCopy.indexOf(newFav),1);
         this.setState({favorites: [...favoritesCopy] }) 
       }
-    }else{
-      alert('ERROR');
+    }else{ //Si se selecciona una tarjeta de favoritos
+        const favoritesCopy = Object.assign([],this.state.favorites);
+        favoritesCopy.splice(favoritesCopy.indexOf(isAlreadyInFavs),1);
+        this.setState({favorites: [...favoritesCopy] }) 
     }
   }
 

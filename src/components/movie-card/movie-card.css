@@ -1,6 +1,22 @@
 
 
-.movie-card{
+.favorite{
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100px;
+    height: 200px;
+    background-color: lightcoral;
+    margin: 5px;
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    border: solid 1px black;
+}
+
+.normal{
     cursor: pointer;
     display: flex;
     flex-direction: column;
@@ -16,7 +32,11 @@
     border: solid 1px black;
 }
 
-img{
+.favorite img{
+    height: 110px;
+    width: 80px;
+}
+.normal img{
     height: 300px;
     width: 200px;
 }
