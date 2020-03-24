@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Pelis-React/precache-manifest.ef2ebefa4227b6868386cdaa1cf88dc2.js"
+  "/Pelis-React/precache-manifest.23cc7cfb28e58a6cdf9f848ef20f59cb.js"
 );
 
 self.addEventListener('message', (event) => {
