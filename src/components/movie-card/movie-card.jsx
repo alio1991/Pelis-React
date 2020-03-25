@@ -9,13 +9,22 @@ class  MovieCard extends React.Component {
       return (  
           <div id={this.props.movie.imdbID} className={this.props.class} onClick={cardSelected}>
             <p>{this.getTitle()}</p>
-            <img src={this.props.movie.Poster || image} alt="Movie" ></img>
+            <img src={this.getSrc()} onError={this.errorSrc} alt="Movie" ></img>
           </div> 
       );
   }
 
   getTitle(){
-    return this.props.movie.Title.length < 41 || this.props.class==='normal'   ? this.props.movie.Title : this.props.movie.Title.substr(0,40)+'...'
+    return this.props.movie.Title.length < 41 || this.props.class==='normal' ? this.props.movie.Title : this.props.movie.Title.substr(0,40)+'...'
+  }
+
+  getSrc(){
+    return this.props.movie.Poster === 'N/A' ? image : this.props.movie.Poster;
+  }
+
+  errorSrc(ev){
+    ev.currentTarget.onError = null;
+    ev.currentTarget.src = image;
   }
 
 }
