@@ -10,8 +10,9 @@ class  App extends React.Component {
     super(props);
     this.state = {
       list: [],
-      favorites: []
+      favorites: this.loadFromLocalStorage('favorites') || []
     }
+    // this.setState({favorites: this.loadFromLocalStorage('favorites')});   
     this.getMovies = this.getMovies.bind(this);
     this.cardSelected = this.cardSelected.bind(this);
 
@@ -63,17 +64,29 @@ class  App extends React.Component {
     
     if(newFav){ //Si se selecciona una tarjeta de busqueda
       if(!isAlreadyInFavs){ // Si no está en favoritos se añade
-        this.setState({favorites: [...this.state.favorites,newFav] }) 
+        this.saveToLocalStorage('favorites', [...this.state.favorites,newFav])
+        this.setState({favorites: [...this.state.favorites,newFav] }); 
       }else{ // Si ya se encuentra en favoritos, se borra
         const favoritesCopy = Object.assign([],this.state.favorites);
         favoritesCopy.splice(favoritesCopy.indexOf(newFav),1);
-        this.setState({favorites: [...favoritesCopy] }) 
+        this.saveToLocalStorage('favorites', favoritesCopy)
+        this.setState({favorites: [...favoritesCopy] }); 
       }
     }else{ //Si se selecciona una tarjeta de favoritos
         const favoritesCopy = Object.assign([],this.state.favorites);
         favoritesCopy.splice(favoritesCopy.indexOf(isAlreadyInFavs),1);
-        this.setState({favorites: [...favoritesCopy] }) 
+        this.saveToLocalStorage('favorites', favoritesCopy)
+        this.setState({favorites: [...favoritesCopy] });  
     }
+    
+  }
+
+  saveToLocalStorage(name, item){
+    localStorage.setItem(name,  JSON.stringify(item));
+  }
+
+  loadFromLocalStorage(name){
+    return JSON.parse(localStorage.getItem(name));
   }
 
   searchById(id,arr){
