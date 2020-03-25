@@ -1,5 +1,6 @@
 import React from 'react';
 import './movie-card.css';
+import * as image from '../../../src/assets/images/no-image.jpg'
 
 class  MovieCard extends React.Component {
 
@@ -7,11 +8,16 @@ class  MovieCard extends React.Component {
     const {cardSelected } = this.props;
       return (  
           <div id={this.props.movie.imdbID} className={this.props.class} onClick={cardSelected}>
-            <p>{this.props.class==='normal' ? this.props.movie.Title : this.props.movie.Title.substr(0,10)+'...'}</p>
-            <img src={this.props.movie.Poster !== 'N/A' ? this.props.movie.Poster : '../../assets/images/no-image.jpg'} alt="Movie" ></img>
+            <p>{this.getTitle()}</p>
+            <img src={this.props.movie.Poster || image} alt="Movie" ></img>
           </div> 
       );
   }
+
+  getTitle(){
+    return this.props.movie.Title.length > 40 || this.props.class==='normal'   ? this.props.movie.Title : this.props.movie.Title.substr(0,40)+'...'
+  }
+
 }
  
 export default MovieCard;

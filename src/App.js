@@ -39,8 +39,8 @@ class  App extends React.Component {
   }
 
 
-  getMovies(ev){    
-    const inputValue = ev.currentTarget.previousElementSibling.value; 
+  getMovies(inputValue){    
+    // const inputValue = ev.currentTarget.previousElementSibling.value; 
     const page = 1;
     const type = 'movie'; // movie, series, episode
     fetch(`https://www.omdbapi.com/?s=${inputValue}&plot=full&apikey=e477ed6a&page=${page}&type=${type}`)

@@ -8,8 +8,8 @@ class MovieList extends React.Component {
     const {cardSelected } = this.props;
      return (
          <div className="card-container">
-            { this.props.list.map(movie => 
-                <MovieCard class={this.props.class} key={movie.imdbID} movie={movie} cardSelected={ cardSelected }></MovieCard>
+            { this.props.list.map((movie,i) => 
+                <MovieCard class={this.props.class} key={movie.imdbID+i} movie={movie} cardSelected={ cardSelected }></MovieCard>
             )}
          </div>
      )
