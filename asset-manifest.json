@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "/Pelis-React/static/css/main.6f21d590.chunk.css",
-    "main.js": "/Pelis-React/static/js/main.941b1570.chunk.js",
-    "main.js.map": "/Pelis-React/static/js/main.941b1570.chunk.js.map",
+    "main.css": "/Pelis-React/static/css/main.263e9df9.chunk.css",
+    "main.js": "/Pelis-React/static/js/main.7765fa1a.chunk.js",
+    "main.js.map": "/Pelis-React/static/js/main.7765fa1a.chunk.js.map",
     "runtime-main.js": "/Pelis-React/static/js/runtime-main.1e1be97f.js",
     "runtime-main.js.map": "/Pelis-React/static/js/runtime-main.1e1be97f.js.map",
-    "static/js/2.0d8132f0.chunk.js": "/Pelis-React/static/js/2.0d8132f0.chunk.js",
-    "static/js/2.0d8132f0.chunk.js.map": "/Pelis-React/static/js/2.0d8132f0.chunk.js.map",
+    "static/js/2.4dbb9aa8.chunk.js": "/Pelis-React/static/js/2.4dbb9aa8.chunk.js",
+    "static/js/2.4dbb9aa8.chunk.js.map": "/Pelis-React/static/js/2.4dbb9aa8.chunk.js.map",
     "index.html": "/Pelis-React/index.html",
-    "precache-manifest.23cc7cfb28e58a6cdf9f848ef20f59cb.js": "/Pelis-React/precache-manifest.23cc7cfb28e58a6cdf9f848ef20f59cb.js",
+    "precache-manifest.38a5b410a2737dcf1c526a9a06196f5d.js": "/Pelis-React/precache-manifest.38a5b410a2737dcf1c526a9a06196f5d.js",
     "service-worker.js": "/Pelis-React/service-worker.js",
-    "static/css/main.6f21d590.chunk.css.map": "/Pelis-React/static/css/main.6f21d590.chunk.css.map",
-    "static/js/2.0d8132f0.chunk.js.LICENSE.txt": "/Pelis-React/static/js/2.0d8132f0.chunk.js.LICENSE.txt"
+    "static/css/main.263e9df9.chunk.css.map": "/Pelis-React/static/css/main.263e9df9.chunk.css.map",
+    "static/js/2.4dbb9aa8.chunk.js.LICENSE.txt": "/Pelis-React/static/js/2.4dbb9aa8.chunk.js.LICENSE.txt",
+    "static/media/no-image.jpg": "/Pelis-React/static/media/no-image.99ca1a41.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.1e1be97f.js",
-    "static/js/2.0d8132f0.chunk.js",
-    "static/css/main.6f21d590.chunk.css",
-    "static/js/main.941b1570.chunk.js"
+    "static/js/2.4dbb9aa8.chunk.js",
+    "static/css/main.263e9df9.chunk.css",
+    "static/js/main.7765fa1a.chunk.js"
   ]
 }
