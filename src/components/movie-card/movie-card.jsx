@@ -15,7 +15,7 @@ class  MovieCard extends React.Component {
   }
 
   getTitle(){
-    return this.props.movie.Title.length > 40 || this.props.class==='normal'   ? this.props.movie.Title : this.props.movie.Title.substr(0,40)+'...'
+    return this.props.movie.Title.length < 41 || this.props.class==='normal'   ? this.props.movie.Title : this.props.movie.Title.substr(0,40)+'...'
   }
 
 }
