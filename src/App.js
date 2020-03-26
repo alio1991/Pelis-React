@@ -12,7 +12,6 @@ class  App extends React.Component {
       list: [],
       favorites: this.loadFromLocalStorage('favorites') || []
     }
-    // this.setState({favorites: this.loadFromLocalStorage('favorites')});   
     this.getMovies = this.getMovies.bind(this);
     this.cardSelected = this.cardSelected.bind(this);
 
@@ -41,7 +40,6 @@ class  App extends React.Component {
 
 
   getMovies(inputValue){    
-    // const inputValue = ev.currentTarget.previousElementSibling.value; 
     const page = 1;
     const type = 'movie'; // movie, series, episode
     fetch(`https://www.omdbapi.com/?s=${inputValue}&plot=full&apikey=e477ed6a&page=${page}&type=${type}`)
@@ -78,7 +76,6 @@ class  App extends React.Component {
         this.saveToLocalStorage('favorites', favoritesCopy)
         this.setState({favorites: [...favoritesCopy] });  
     }
-    
   }
 
   saveToLocalStorage(name, item){
@@ -97,7 +94,6 @@ class  App extends React.Component {
     }
     return null;
   }
-
 }
 
 export default App;
