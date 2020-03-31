@@ -17,8 +17,6 @@ class  App extends React.Component {
 
   }
 
-  // componentDidMount(){};
-
   render() { 
     const { getMovies } = this;
     const { cardSelected } = this;
@@ -65,16 +63,12 @@ class  App extends React.Component {
         this.saveToLocalStorage('favorites', [...this.state.favorites,newFav])
         this.setState({favorites: [...this.state.favorites,newFav] }); 
       }else{ // Si ya se encuentra en favoritos, se borra
-        const favoritesCopy = Object.assign([],this.state.favorites);
-        favoritesCopy.splice(favoritesCopy.indexOf(newFav),1);
-        this.saveToLocalStorage('favorites', favoritesCopy)
-        this.setState({favorites: [...favoritesCopy] }); 
+        this.saveToLocalStorage('favorites',  this.state.favorites.filter(elem => elem !== newFav))
+        this.setState({favorites: this.state.favorites.filter(elem => elem !== newFav) }); 
       }
     }else{ //Si se selecciona una tarjeta de favoritos
-        const favoritesCopy = Object.assign([],this.state.favorites);
-        favoritesCopy.splice(favoritesCopy.indexOf(isAlreadyInFavs),1);
-        this.saveToLocalStorage('favorites', favoritesCopy)
-        this.setState({favorites: [...favoritesCopy] });  
+        this.saveToLocalStorage('favorites', this.state.favorites.filter(elem => elem !== isAlreadyInFavs))
+        this.setState({favorites: this.state.favorites.filter(elem => elem !== isAlreadyInFavs) });  
     }
   }
 
