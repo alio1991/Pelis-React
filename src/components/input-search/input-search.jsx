@@ -13,7 +13,7 @@ const  InputSearch = (props) => {
     
     return (  
         <div className="input-search">
-            <h1>Input Search</h1>
+            <h1>{props.title}</h1>
             <input type="text" onChange={inputChanges}></input>
         </div> 
     )

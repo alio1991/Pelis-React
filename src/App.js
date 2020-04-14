@@ -64,7 +64,7 @@ function App() {
 
     return (
       <div className="App">
-          <InputSearch buttonName={'busca'} actionToPerform={ getMovies }></InputSearch>
+          <InputSearch title='Buscador de Películas' buttonName={'busca'} actionToPerform={ getMovies }></InputSearch>
           <main>
             <aside className="aside">
               <MovieList list={favorites} cardSelected={ cardSelected } class="favorite" ></MovieList>
