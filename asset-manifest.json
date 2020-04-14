@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Pelis-React/static/css/main.263e9df9.chunk.css",
-    "main.js": "/Pelis-React/static/js/main.f06e902f.chunk.js",
-    "main.js.map": "/Pelis-React/static/js/main.f06e902f.chunk.js.map",
+    "main.js": "/Pelis-React/static/js/main.2b4ef837.chunk.js",
+    "main.js.map": "/Pelis-React/static/js/main.2b4ef837.chunk.js.map",
     "runtime-main.js": "/Pelis-React/static/js/runtime-main.1e1be97f.js",
     "runtime-main.js.map": "/Pelis-React/static/js/runtime-main.1e1be97f.js.map",
     "static/js/2.38b01cb0.chunk.js": "/Pelis-React/static/js/2.38b01cb0.chunk.js",
     "static/js/2.38b01cb0.chunk.js.map": "/Pelis-React/static/js/2.38b01cb0.chunk.js.map",
     "index.html": "/Pelis-React/index.html",
-    "precache-manifest.12bb42b38f0d78cf8d93f9b3b9cbbed9.js": "/Pelis-React/precache-manifest.12bb42b38f0d78cf8d93f9b3b9cbbed9.js",
+    "precache-manifest.4175e1e9fb14bdd220571e3ae03fb1b0.js": "/Pelis-React/precache-manifest.4175e1e9fb14bdd220571e3ae03fb1b0.js",
     "service-worker.js": "/Pelis-React/service-worker.js",
     "static/css/main.263e9df9.chunk.css.map": "/Pelis-React/static/css/main.263e9df9.chunk.css.map",
     "static/js/2.38b01cb0.chunk.js.LICENSE.txt": "/Pelis-React/static/js/2.38b01cb0.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.1e1be97f.js",
     "static/js/2.38b01cb0.chunk.js",
     "static/css/main.263e9df9.chunk.css",
-    "static/js/main.f06e902f.chunk.js"
+    "static/js/main.2b4ef837.chunk.js"
   ]
 }

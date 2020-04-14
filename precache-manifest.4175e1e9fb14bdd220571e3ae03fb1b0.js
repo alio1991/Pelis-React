@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1c0951b92ebcf0b0e815a524b85edd18",
+    "revision": "58583ce8d9896949efdcda7667f17cc0",
     "url": "/Pelis-React/index.html"
   },
   {
-    "revision": "59578b5ae9221b15f8dc",
+    "revision": "69c1adbf53cbd241a390",
     "url": "/Pelis-React/static/css/main.263e9df9.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Pelis-React/static/js/2.38b01cb0.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "59578b5ae9221b15f8dc",
-    "url": "/Pelis-React/static/js/main.f06e902f.chunk.js"
+    "revision": "69c1adbf53cbd241a390",
+    "url": "/Pelis-React/static/js/main.2b4ef837.chunk.js"
   },
   {
     "revision": "50bf34e1754af1768c76",
